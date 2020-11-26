@@ -1,0 +1,116 @@
+LVM
+
+Partions are abstracted, they could all be on a single drive, or be spread out, partially or fully, across multiple drives.  Linux doesn't use drive letters; instead, Linux uses a unifed directory tree.  
+Each partition is mounted at a mount point in that tree. A mount point is a directory that's used in a way to access the filesystem to the mount point.  
+
+A "mount point" is a directory that's used to access the filesystem on the partition, and mounting the filesystem is the process of linking the filesystem to the mount point. 
+
+Security Enhanced Linux is a kernel loadable module with stronger permissions around quarantining users to specific partitions.
+
+
+When and how to create multiple partitions
+
+The root partition is required, and a swap partition is a very good idea.
+/boot partition can be helpful on hard disks of more than 8gb.
+
+When you get it wrong, you either have to resize your partitions or set up symboliclinks between partitions so that subdirectories on one partition can be stored on other partitions.
+Resizing also results in downtime.
+
+Things may differ from system to system. A workstation might have a very small /var partition while a mail server might have one gigabytes in size. Is this a workstation or server.
+
+fdisk
+
+gnu parted 
+- more features than fdisk
+- parted /dev/hda
+
+
+Preparing partition for use
+
+Once a partition is created, you must prepare it for use.
+Also called "Making a file system" or "formatting a partition". It involves writing low-level data structures to disk.
+the word "formatting" is somewhat ambiguious. Low level formatting creates a structure of sectors and tracks on the disk media.
+High level formatting, which creates a filesystem.  Hard disks are low level formatted at the factory and should never need to be low-level formatted again. 
+
+
+Ext2fs 
+
+The second extended file system, Ext3fs is third with journaling. Ext4fs deals with very large disks or very large files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
